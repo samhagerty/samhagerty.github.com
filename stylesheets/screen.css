@@ -1,0 +1,1533 @@
+/* @import compass/reset */
+/* HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ========================================================== */
+/* =============================================================================
+ * HTML5 display definitions
+ * ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* =============================================================================
+ * Base
+ * ========================================================================== */
+/* Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design. */
+::-moz-selection, ::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+/* =============================================================================
+ * Typography
+ * ========================================================================== */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 1em 40px;
+}
+
+dfn {
+  font-style: italic;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+ins {
+  background: #ffff99;
+  color: black;
+  text-decoration: none;
+}
+
+mark {
+  background: yellow;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp {
+  font-family: monospace, serif;
+  _font-family: "courier new", monospace;
+  font-size: 1em;
+}
+
+/* Improve readability of pre-formatted text */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: none;
+}
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+small {
+  font-size: 85%;
+}
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+ * Lists
+ * ========================================================================== */
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================================================
+ * Embedded content
+ * ========================================================================== */
+/* 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440 */
+img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Correct overflow not hidden in IE9 */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+ * Figures
+ * ========================================================================== */
+figure, form {
+  margin: 0;
+}
+
+/* =============================================================================
+ * Forms
+ * ========================================================================== */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+  cursor: pointer;
+}
+
+/* 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7 */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+/* 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers */
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+/* 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet) */
+button, input {
+  line-height: normal;
+}
+
+/* 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6) */
+button {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+/* Re-set default cursor for disabled elements */
+button[disabled] {
+  cursor: default;
+}
+
+input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* Consistent box sizing and appearance */
+/* Remove inner padding and border in FF3/4: h5bp.com/l */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/* =============================================================================
+ * Tables
+ * ========================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  vertical-align: top;
+}
+
+/* ==|== primary styles =====================================================
+ * Author:
+ * ========================================================================== */
+/* ==|== media queries ======================================================
+ * EXAMPLE Media Query for Responsive Design.
+ * This example overrides the primary ('mobile first') styles
+ * Modify as content requires.
+ * ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+/* ==|== non-semantic helper classes ========================================
+ * Please define your styles before this section.
+ * ========================================================================== */
+/* Image replacement */
+.ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent;
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p */
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+
+/* Contain floats: h5bp.com/q */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ==|== print styles =======================================================
+ * Print styles.
+ * Inlined to avoid required HTTP connection: h5bp.com/r
+ * ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  .ir a:after {
+    content: "";
+  }
+
+  a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  pre, blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  img {
+    page-break-inside: avoid;
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+/* Mixins to extend what Compass provides */
+/* Pygments */
+.hll {
+  background-color: #ffffcc;
+}
+
+.c {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment */
+.err {
+  border: 1px solid red;
+}
+
+/* Error */
+.k {
+  color: green;
+  font-weight: bold;
+}
+
+/* Keyword */
+.o {
+  color: #666666;
+}
+
+/* Operator */
+.cm {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+.cp {
+  color: #bc7a00;
+}
+
+/* Comment.Preproc */
+.c1, .cs {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment.Single */
+/* Comment.Special */
+.gd {
+  color: #a00000;
+}
+
+/* Generic.Deleted */
+.ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+.gr {
+  color: red;
+}
+
+/* Generic.Error */
+.gh {
+  color: navy;
+  font-weight: bold;
+}
+
+/* Generic.Heading */
+.gi {
+  color: #00a000;
+}
+
+/* Generic.Inserted */
+.go {
+  color: gray;
+}
+
+/* Generic.Output */
+.gp {
+  color: navy;
+  font-weight: bold;
+}
+
+/* Generic.Prompt */
+.gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+.gu {
+  color: purple;
+  font-weight: bold;
+}
+
+/* Generic.Subheading */
+.gt {
+  color: #0040d0;
+}
+
+/* Generic.Traceback */
+.kc, .kd, .kn {
+  color: green;
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+/* Keyword.Declaration */
+/* Keyword.Namespace */
+.kp {
+  color: green;
+}
+
+/* Keyword.Pseudo */
+.kr {
+  color: green;
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+.kt {
+  color: #b00040;
+}
+
+/* Keyword.Type */
+.m {
+  color: #666666;
+}
+
+/* Literal.Number */
+.s {
+  color: #ba2121;
+}
+
+/* Literal.String */
+.na {
+  color: #7d9029;
+}
+
+/* Name.Attribute */
+.nb {
+  color: green;
+}
+
+/* Name.Builtin */
+.nc {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Name.Class */
+.no {
+  color: #880000;
+}
+
+/* Name.Constant */
+.nd {
+  color: #aa22ff;
+}
+
+/* Name.Decorator */
+.ni {
+  color: #999999;
+  font-weight: bold;
+}
+
+/* Name.Entity */
+.ne {
+  color: #d2413a;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+.nf {
+  color: blue;
+}
+
+/* Name.Function */
+.nl {
+  color: #a0a000;
+}
+
+/* Name.Label */
+.nn {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Name.Namespace */
+.nt {
+  color: green;
+  font-weight: bold;
+}
+
+/* Name.Tag */
+.nv {
+  color: #19177c;
+}
+
+/* Name.Variable */
+.ow {
+  color: #aa22ff;
+  font-weight: bold;
+}
+
+/* Operator.Word */
+.w {
+  color: #bbbbbb;
+}
+
+/* Text.Whitespace */
+.mf, .mh, .mi, .mo {
+  color: #666666;
+}
+
+/* Literal.Number.Float */
+/* Literal.Number.Hex */
+/* Literal.Number.Integer */
+/* Literal.Number.Oct */
+.sb, .sc {
+  color: #ba2121;
+}
+
+/* Literal.String.Backtick */
+/* Literal.String.Char */
+.sd {
+  color: #ba2121;
+  font-style: italic;
+}
+
+/* Literal.String.Doc */
+.s2 {
+  color: #ba2121;
+}
+
+/* Literal.String.Double */
+.se {
+  color: #bb6622;
+  font-weight: bold;
+}
+
+/* Literal.String.Escape */
+.sh {
+  color: #ba2121;
+}
+
+/* Literal.String.Heredoc */
+.si {
+  color: #bb6688;
+  font-weight: bold;
+}
+
+/* Literal.String.Interpol */
+.sx {
+  color: green;
+}
+
+/* Literal.String.Other */
+.sr {
+  color: #bb6688;
+}
+
+/* Literal.String.Regex */
+.s1 {
+  color: #ba2121;
+}
+
+/* Literal.String.Single */
+.ss {
+  color: #19177c;
+}
+
+/* Literal.String.Symbol */
+.bp {
+  color: green;
+}
+
+/* Name.Builtin.Pseudo */
+.vc, .vg, .vi {
+  color: #19177c;
+}
+
+/* Name.Variable.Class */
+/* Name.Variable.Global */
+/* Name.Variable.Instance */
+.il {
+  color: #666666;
+}
+
+/* Literal.Number.Integer.Long */
+/* Rhythm defaults */
+/* Hit me with the rhythm stick */
+* html {
+  font-size: 125%;
+}
+
+html {
+  font-size: 20px;
+  line-height: 1.8em;
+}
+
+/* Colours */
+/* Shadow defaults */
+/*
+ *Google Code style (c) Aahan Krish <geekpanth3r@gmail.com> */
+pre code {
+  display: block;
+  padding: 0.5em;
+  background: white;
+  color: black;
+}
+pre .comment, pre .template_comment, pre .javadoc, pre .comment * {
+  color: #880000;
+}
+pre .keyword, pre .method, pre .list .title, pre .clojure .built_in, pre .nginx .title, pre .tag .title, pre .setting .value, pre .winutils, pre .tex .command, pre .http .title, pre .request, pre .status {
+  color: #000088;
+}
+pre .envvar, pre .tex .special {
+  color: #666600;
+}
+pre .string, pre .tag .value, pre .cdata, pre .filter .argument, pre .attr_selector, pre .apache .cbracket, pre .date, pre .regexp {
+  color: #008800;
+}
+pre .sub .identifier, pre .pi {
+  color: #006666;
+}
+pre .tag {
+  color: #006666;
+}
+pre .tag .keyword {
+  color: #006666;
+}
+pre .decorator, pre .ini .title, pre .shebang, pre .input_number, pre .hexcolor, pre .rules .value, pre .css .value .number, pre .literal, pre .symbol, pre .ruby .symbol .string, pre .number, pre .css .function, pre .clojure .attribute {
+  color: #006666;
+}
+pre .class .title, pre .haskell .type, pre .smalltalk .class, pre .javadoctag, pre .yardoctag, pre .phpdoc, pre .typename, pre .tag .attribute, pre .doctype, pre .class .id, pre .built_in, pre .setting, pre .params, pre .variable, pre .clojure .title {
+  color: #660066;
+}
+pre .css .tag, pre .rules .property, pre .pseudo, pre .subst {
+  color: black;
+}
+pre .css .class, pre .css .id {
+  color: #9b703f;
+}
+pre .value .important {
+  color: #ff7700;
+  font-weight: bold;
+}
+pre .rules .keyword {
+  color: #c5af75;
+}
+pre .annotation, pre .apache .sqbracket, pre .nginx .built_in {
+  color: #9b859d;
+}
+pre .preprocessor {
+  color: #444444;
+}
+pre .preprocessor * {
+  color: #444444;
+}
+pre .tex .formula {
+  background-color: #eeeeee;
+  font-style: italic;
+}
+pre .diff .header, pre .chunk {
+  color: gray;
+  font-weight: bold;
+}
+pre .diff .change {
+  background-color: #bccff9;
+}
+pre .addition {
+  background-color: #baeeba;
+}
+pre .deletion {
+  background-color: #ffc8bd;
+}
+pre .comment .yardoctag {
+  font-weight: bold;
+}
+
+* {
+  /* Some font love */
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #2c3437;
+}
+
+body {
+  margin: 0;
+  background: #2c3437;
+}
+
+/* Headings */
+h1 {
+  font-size: 3em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  font-family: "Roboto Condensed", Georgia, Serif;
+}
+
+/* Links */
+a {
+  color: #fe0088;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+a:visited, a:active {
+  color: #b4186c;
+}
+a:hover {
+  color: #ff1c7c;
+  -webkit-transition: color 0.1s ease-out;
+  -moz-transition: color 0.1s ease-out;
+  -o-transition: color 0.1s ease-out;
+  transition: color 0.1s ease-out;
+}
+
+.gittip a {
+  color: #b4186c !important;
+}
+
+acronym {
+  border-bottom: 1px dashed #2c3437;
+}
+acronym:hover {
+  cursor: help;
+}
+
+input {
+  background-color: white;
+  font-size: 0.8em;
+  line-height: 2.25em;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 4px 14px;
+  display: inline-block;
+  border: 2px solid #dddddd;
+}
+
+img.bordered {
+  border: 2px solid #eaeaee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+img.centered {
+  display: block;
+  margin: auto;
+}
+
+img.left {
+  float: left;
+  margin: 10px 20px 10px 0;
+}
+
+/* Page structure */
+.page-container {
+  background: #fafafe;
+  padding-bottom: 1em;
+}
+
+.page, footer {
+  max-width: 720px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.entry p:first-child {
+  margin-top: 0;
+  padding-top: 1em;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+header.top {
+  min-height: 100px;
+  position: relative;
+}
+header.top.top {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.internal header.post h1, .content h1 {
+  padding: 0.5em 0 0;
+  margin: 0;
+  text-align: center;
+}
+.internal header.post .date, .content .date {
+  text-align: center;
+  margin: 0;
+}
+
+footer {
+  padding-bottom: 40px;
+  background-color: #2c3437;
+  z-index: 10;
+  text-align: center;
+}
+footer p {
+  color: #fafafe;
+  text-shadow: none;
+  padding-top: 1.8em;
+  margin: 0;
+}
+footer a, footer a:visited {
+  color: white;
+}
+
+/* Post layout bits */
+article h2, article h3 {
+  margin-top: 1.75em;
+}
+article header .date {
+  margin-top: -36px;
+  color: #888888;
+}
+
+section.content, section.footer-content {
+  width: 100%;
+  float: left;
+}
+
+/* Home stylers */
+.home .page {
+  max-width: 100%;
+}
+.home .content {
+  margin-top: -2em;
+  width: 100%;
+  padding: 0;
+}
+.home article {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1em 0 0;
+  position: relative;
+}
+.home article a {
+  color: #1c3243;
+}
+.home article a:hover {
+  color: #ff1c7c;
+}
+.home article h1 {
+  padding-top: 1em;
+}
+.home article h1, .home article .date {
+  text-align: center;
+}
+.home article img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 1em auto -1em auto;
+  -webkit-box-shadow: 0 0 20px rgba(100, 100, 100, 0.4);
+  -moz-box-shadow: 0 0 20px rgba(100, 100, 100, 0.4);
+  box-shadow: 0 0 20px rgba(100, 100, 100, 0.4);
+  border: 1px solid white;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  -ms-border-radius: 150px;
+  -o-border-radius: 150px;
+  border-radius: 150px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+.home article img:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  lefy: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 500px) {
+  .home article {
+    margin-top: 1em;
+    width: 720px;
+  }
+  .home article h1 {
+    padding-top: 0.5em;
+    margin-bottom: 0;
+  }
+  .home article .date {
+    margin-top: 0;
+  }
+  .home article img {
+    width: 300px;
+    height: 300px;
+  }
+}
+code {
+  background-color: #eaeaee !important;
+  font-size: 0.8em;
+  line-height: 2.25em;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  padding: 0 8px;
+  display: inline-block;
+  font-family: "Source Code Pro", sans-serif;
+}
+
+pre code {
+  padding: 16px;
+  tab-size: 2;
+}
+
+.video-wrapper {
+  margin: 1em auto;
+}
+
+.example-with-code {
+  padding: 2em 0;
+}
+.example-with-code .left {
+  width: 50%;
+  float: left;
+}
+.example-with-code .right {
+  width: 50%;
+  float: left;
+}
+.example-with-code .right pre {
+  margin: 0;
+  height: 190px;
+}
+.example-with-code .right pre code {
+  padding: 5px 8px;
+  font-size: 14px;
+  line-height: 20px;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Nav for post pages */
+nav.pagination {
+  padding: 1em auto;
+  text-align: center;
+  font-size: 2.4em;
+  line-height: 1.5em;
+}
+nav.pagination .previous {
+  padding-right: 2em;
+}
+
+.bouncer-container * {
+  position: absolute;
+}
+
+.bouncer-container {
+  position: relative;
+  margin: 0;
+  width: 200px;
+  height: 100px;
+  top: 36px;
+  left: -40px;
+}
+.bouncer-container a {
+  text-indent: -9999px;
+  z-index: 0;
+}
+.bouncer-container a:hover .bouncer {
+  background-color: #ff1c7c;
+  -webkit-transition: background-color 0.1s ease-out;
+  -moz-transition: background-color 0.1s ease-out;
+  -o-transition: background-color 0.1s ease-out;
+  transition: background-color 0.1s ease-out;
+  cursor: pointer;
+}
+.bouncer-container a:hover .ear1, .bouncer-container a:hover .ear2 {
+  background-color: #ff1c7c;
+  -webkit-transition: background-color 0.1s ease-out;
+  -moz-transition: background-color 0.1s ease-out;
+  -o-transition: background-color 0.1s ease-out;
+  transition: background-color 0.1s ease-out;
+}
+.bouncer-container .mask {
+  width: 200px;
+  height: 38px;
+  position: absolute;
+  top: 42px;
+  left: -50px;
+  background-color: #fafafe;
+  z-index: 1;
+}
+.bouncer-container .bouncer {
+  top: 21px;
+  left: -50px;
+  width: 50px;
+  height: 60px;
+  background-color: #1c3243;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  -webkit-border-radius: 25px 30px;
+  -moz-border-radius: 25px / 30px;
+  border-radius: 25px / 30px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  z-index: 2;
+}
+.bouncer-container .bouncer-end-position {
+  top: 0;
+  left: 41px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+.bouncer-container .ear1, .bouncer-container .ear2 {
+  width: 8px;
+  height: 28px;
+  background-color: #1c3243;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  -webkit-border-radius: 50% 50%;
+  -moz-border-radius: 50% / 50%;
+  border-radius: 50% / 50%;
+}
+.bouncer-container .ear1 {
+  top: -12px;
+  left: 10px;
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+.bouncer-container .ear2 {
+  top: -12px;
+  right: 10px;
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+.bouncer-container .eye1, .bouncer-container .eye2 {
+  top: 10px;
+  left: 20px;
+  background-color: #fafafe;
+  width: 5px;
+  height: 6px;
+  -webkit-border-radius: 50% 50%;
+  -moz-border-radius: 50% / 50%;
+  border-radius: 50% / 50%;
+}
+.bouncer-container .eye1 {
+  top: 12px;
+  left: 22px;
+}
+.bouncer-container .eye2 {
+  top: 12px;
+  left: 32px;
+}
+.bouncer-container .mouth {
+  top: 24px;
+  left: 22px;
+  width: 15px;
+  height: 8px;
+  background-color: #fafafe;
+  -moz-border-radius-bottomleft: 25px;
+  -webkit-border-bottom-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  -moz-border-radius-bottomright: 25px;
+  -webkit-border-bottom-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* Override for older browsers */
+html.no-js .bouncer-container a {
+  background: url(/images/bouncer.png) no-repeat;
+  height: 100px;
+  width: 220px;
+  left: -50px;
+  top: -10px;
+}
+html.no-js .bouncer-container a:hover {
+  background-image: url(/images/bouncer-hover.png);
+}
+
+.move-bouncer {
+  -webkit-animation: move-bouncer 2s forwards;
+  -moz-animation: move-bouncer 2s forwards;
+  -o-animation: move-bouncer 2s forwards;
+  -ms-animation: move-bouncer 2s forwards;
+  animation: move-bouncer 2s forwards;
+}
+
+@-moz-keyframes move-bouncer {
+  0% {
+    height: 40px;
+    -moz-border-radius: 25px / 20px;
+    border-radius: 25px / 20px;
+    top: 42px;
+  }
+
+  15% {
+    top: 0;
+    height: 60px;
+    -moz-border-radius: 25px / 30px;
+    border-radius: 25px / 30px;
+  }
+
+  30%, 33% {
+    top: 42px;
+    left: 21px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    -moz-border-radius: 25px / 20px;
+    border-radius: 25px / 20px;
+  }
+
+  45%, 100% {
+    top: 0;
+    left: 41px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
+    -moz-border-radius: 25px / 30px;
+    border-radius: 25px / 30px;
+  }
+}
+
+@-webkit-keyframes move-bouncer {
+  0% {
+    height: 40px;
+    -webkit-border-radius: 25px 20px;
+    border-radius: 25px / 20px;
+    top: 42px;
+  }
+
+  15% {
+    top: 0;
+    height: 60px;
+    -webkit-border-radius: 25px 30px;
+    border-radius: 25px / 30px;
+  }
+
+  30%, 33% {
+    top: 42px;
+    left: 21px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    -webkit-border-radius: 25px 20px;
+    border-radius: 25px / 20px;
+  }
+
+  45%, 100% {
+    top: 0;
+    left: 41px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
+    -webkit-border-radius: 25px 30px;
+    border-radius: 25px / 30px;
+  }
+}
+
+@-o-keyframes move-bouncer {
+  0% {
+    height: 40px;
+    border-radius: 25px / 20px;
+    top: 42px;
+  }
+
+  15% {
+    top: 0;
+    height: 60px;
+    border-radius: 25px / 30px;
+  }
+
+  30%, 33% {
+    top: 42px;
+    left: 21px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    border-radius: 25px / 20px;
+  }
+
+  45%, 100% {
+    top: 0;
+    left: 41px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
+    border-radius: 25px / 30px;
+  }
+}
+
+@-ms-keyframes move-bouncer {
+  0% {
+    height: 40px;
+    border-radius: 25px / 20px;
+    top: 42px;
+  }
+
+  15% {
+    top: 0;
+    height: 60px;
+    border-radius: 25px / 30px;
+  }
+
+  30%, 33% {
+    top: 42px;
+    left: 21px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    border-radius: 25px / 20px;
+  }
+
+  45%, 100% {
+    top: 0;
+    left: 41px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
+    border-radius: 25px / 30px;
+  }
+}
+
+@keyframes move-bouncer {
+  0% {
+    height: 40px;
+    -webkit-border-radius: 25px 20px;
+    -moz-border-radius: 25px / 20px;
+    border-radius: 25px / 20px;
+    top: 42px;
+  }
+
+  15% {
+    top: 0;
+    height: 60px;
+    -webkit-border-radius: 25px 30px;
+    -moz-border-radius: 25px / 30px;
+    border-radius: 25px / 30px;
+  }
+
+  30%, 33% {
+    top: 42px;
+    left: 21px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 40px;
+    -webkit-border-radius: 25px 20px;
+    -moz-border-radius: 25px / 20px;
+    border-radius: 25px / 20px;
+  }
+
+  45%, 100% {
+    top: 0;
+    left: 41px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    height: 60px;
+    -webkit-border-radius: 25px 30px;
+    -moz-border-radius: 25px / 30px;
+    border-radius: 25px / 30px;
+  }
+}
+
+pre > .editable-styles {
+  border: 1px solid white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.editable-styles {
+  display: block;
+  height: 700px;
+  overflow: scroll;
+  background: white;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.apple-container {
+  display: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .apple-container {
+    display: block;
+  }
+}
+/* Phone example */
+.thirty-percent {
+  width: 30%;
+  float: left;
+}
+
+.seventy-percent {
+  width: 70%;
+  float: left;
+}
+
+/* Overrides */
+@media only screen and (max-width: 800px) {
+  /* Style adjustments for smaller screens */
+  section.content, section.footer-content {
+    width: auto;
+    float: none;
+  }
+
+  p {
+    font-size: 0.85em;
+    line-height: 2.11765em;
+  }
+
+  .entry p:first-child {
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    line-height: 2em;
+    padding-top: 0.5em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+    line-height: 1.63636em;
+  }
+
+  pre code {
+    font-size: 0.6em;
+    line-height: 3em;
+    line-height: 18px;
+  }
+
+  header.top {
+    min-height: 90px;
+  }
+
+  article header .date {
+    margin-top: -26px;
+    font-size: 0.7em;
+    line-height: 2.57143em;
+  }
+
+  .thirty-percent, .seventy-percent {
+    width: 90%;
+    margin: 0 auto;
+    float: none;
+  }
+
+  .bouncer-container {
+    top: 16px;
+    left: -20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .bouncer-container {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+    top: 5px;
+    left: -30px;
+  }
+
+  header.top {
+    height: 70px;
+  }
+  header.top aside {
+    right: 16px;
+  }
+
+  h1 {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding-top: 0.5em;
+  }
+
+  p {
+    font-size: 0.8em;
+    line-height: 2.25em;
+    line-height: 1.98em;
+  }
+}
