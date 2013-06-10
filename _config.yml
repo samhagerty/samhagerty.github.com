@@ -1,4 +1,13 @@
 permalink: /blog/:title
 pygments: true
 paginate: 6 # the number of post per page
-
+# Settings for analytics helper
+# Set 'provider' to the analytics provider you want to use.
+# Set 'provider' to false to turn analytics off globally.
+#        
+analytics :
+  provider : google
+  google : 
+      tracking_id : 'UA-41626027-1'
+  getclicky :
+    site_id :
