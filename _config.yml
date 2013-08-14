@@ -11,3 +11,4 @@ analytics :
       tracking_id : 'UA-41626027-1'
   getclicky :
     site_id :
+safe : true
